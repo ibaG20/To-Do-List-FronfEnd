@@ -15,4 +15,5 @@ export class TaskService {
   getAllTasks(): Observable<Task[]>{
     return this.http.get<Task[]>(this.url);
   }
+
 }
