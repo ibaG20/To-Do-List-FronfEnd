@@ -16,4 +16,16 @@ export class TaskService {
     return this.http.get<Task[]>(this.url);
   }
 
+  createTask(obj: Task): Observable<Task> {
+    return this.http.post<Task>(this.url, obj);
+  }
+  
+  updateTask(obj: Task): Observable<Task> {
+    return this.http.put<Task>(this.url, obj);
+  }
+  
+  deleteTask(id:number): Observable<void> {
+    return this.http.delete<void>(this.url + '/' + id);
+  }
+
 }

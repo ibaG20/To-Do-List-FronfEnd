@@ -1,0 +1,67 @@
+
+<!-- QUANDO CLICAR NA TD ABRIR UM POPUP COM OS DETALHES DA TAREFA -->
+<table class="table table-hover">
+    <tbody>
+        <tr *ngFor="let t of tasks">
+            <td>
+                <div class="div-check-description">
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" *ngIf="t.completed == true" type="checkbox" value="completed"
+                                id="flexCheckDefault" checked>
+                            <input class="form-check-input" *ngIf="t.completed == false" type="checkbox" value="completed"
+                                id="flexCheckDefault">
+                        </div>
+                    </td>
+                    <td>{{t.description}}</td>
+    
+                </div>
+
+            </td>
+            <td>{{t.category.name}} #</td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" value="Editar" href="#">Editar</a></li>
+                        <li><a class="dropdown-item" value="Excluir">Excluir</a></li>
+                        <li><a class="dropdown-item" value="Excluir" href="#">Add. comentário</a></li>
+                    </ul>
+                </div>
+
+            </td>
+            <!-- <td><button class="btn btn-warning" value="Editar">Editar</button></td>
+            <td><button class="btn btn-danger" value="Excluir">Excluir</button></td> -->
+        </tr>
+    </tbody>
+</table>
+<!-- <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Concluir</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of tasks">
+            <td>{{t.id}}</td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" *ngIf="t.completed == true" type="checkbox" value="completed" id="flexCheckDefault" checked>
+                    <input class="form-check-input" *ngIf="t.completed == false" type="checkbox" value="completed" id="flexCheckDefault">
+                  </div>
+            </td>
+            <td>{{t.description}}</td>
+            <td>{{t.category.name}}</td>
+            <td><button class="btn btn-warning" value="Editar">Editar</button></td>
+            <td><button class="btn btn-danger" value="Excluir">Excluir</button></td>
+        </tr>
+    </tbody>
+</table> -->

@@ -20,3 +20,16 @@ input{
 input[type="button"]{
     margin: 10px;
 }
+
+table{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.div-check-description{
+    display: flex;
+    align-items: center;
+    width: 70vw;
+}

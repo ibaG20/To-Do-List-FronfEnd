@@ -1,45 +1,16 @@
-<form >
+<form>
     <img src="assets/lista.png" alt="">
 
     <label class="form-label">Description</label>
-    <input type="text" placeholder="Fazer atividade X" class="form-control" name="description" [(ngModel)]="task.description">
+    <input type="text" placeholder="Fazer atividade X" class="form-control" name="description"
+        [(ngModel)]="task.description">
+
     <select class="form-select" name="category" [(ngModel)]="task.category">
         <option selected>Category</option>
         <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
     </select>
 
-    <input type="button" value="Cadastrar" class="btn btn-primary">
-    <!-- <input type="button" value="Alterar" class="btn btn-warning">
-    <input type="button" value="Remover" class="btn btn-danger"> -->
+    <input type="button" value="Cadastrar" class="btn btn-primary" (click)="createTask()">
     <input type="button" value="Cancelar" class="btn btn-secondary">
+
 </form>
-
-<h1>{{task | json}}</h1>
-
-<table class="table table-hover"> <!--  class="table table-hover" *ngIf="tabela" -->
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Concluir</th>
-            <th>Description</th>
-            <th>Category</th>
-            <th>Editar</th>
-            <th>Excluir</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let t of tasks">
-            <td>{{t.id}}</td>
-            <td>
-                <div class="form-check">
-                    <input class="form-check-input" *ngIf="t.completed == true" type="checkbox" value="completed" id="flexCheckDefault" checked>
-                    <input class="form-check-input" *ngIf="t.completed == false" type="checkbox" value="completed" id="flexCheckDefault">
-                  </div>
-            </td>
-            <td>{{t.description}}</td>
-            <td>{{t.category.name}}</td>
-            <td><button class="btn btn-warning" value="Editar">Editar</button></td>
-            <td><button class="btn btn-danger" value="Excluir">Excluir</button></td>
-        </tr>
-    </tbody>
-</table>

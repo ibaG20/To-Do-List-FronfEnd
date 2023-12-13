@@ -7,12 +7,20 @@ import { TaskComponent } from './components/task/task.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './components/category/category.component';
+import { NavComponent } from './components/template/nav/nav.component';
+import { FooterComponent } from './components/template/footer/footer.component';
+import { TaskReadComponent } from './components/task/task-read/task-read.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
-    CategoryComponent
+    CategoryComponent,
+    NavComponent,
+    FooterComponent,
+    TaskReadComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
