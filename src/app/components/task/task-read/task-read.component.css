@@ -1,12 +1,97 @@
-table{
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+/*  
+background-color: #d7d8f5;
+color: #2e4d90;
+nav: #7e8eda
+*/
+
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
 }
 
-.div-check-description{
+td {
+    background-color: #d7d8f5;
+    border-color: #fcfce2;
+    color: #2e4d90;
+    cursor: pointer;
+}
+
+.div-check-description {
     display: flex;
     align-items: center;
     width: 70vw;
+}
+
+.btn {
+    /* .dropdown-toggle{ */
+    background-color: #d7d8f5 !important;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu {
+    background-color: #ebecfa;
+    color: #c5dfe0;
+}
+
+.dropdown-item {
+    color: #2e4d90;
+}
+
+.hamburger-image {
+    width: 25px;
+}
+
+.form-check-input:checked {
+    background-color: #2e4d90;
+    border: none;
+}
+
+.btn-create-task{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: #2e4d90 !important;
+    color: #ebecfa;
+
+}
+
+.modal-content{
+/*     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: #d7d8f5;
+}
+
+form{
+    margin: 30px auto;
+    text-align: center;
+}
+
+label{
+    display: block;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+option{
+    border: none;
+}
+
+.backgroud-color-form{
+    background-color: #ebf0ff;
+    color: #2e4d90;
+}
+.backgroud-color-form::placeholder{
+    color: #2e4d90;
 }

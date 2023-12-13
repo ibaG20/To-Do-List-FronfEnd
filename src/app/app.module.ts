@@ -11,6 +11,7 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { TaskReadComponent } from './components/task/task-read/task-read.component';
 import { HomeComponent } from './components/home/home.component';
+import { TaskCreateComponent } from './components/task/task-create/task-create.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './components/home/home.component';
     NavComponent,
     FooterComponent,
     TaskReadComponent,
-    HomeComponent
+    HomeComponent,
+    TaskCreateComponent
   ],
   imports: [
     BrowserModule,

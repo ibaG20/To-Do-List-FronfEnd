@@ -33,6 +33,17 @@ export class TaskReadComponent {
     .subscribe(retorno => this.categories = retorno);
   }
 
+    //metodo de cadastro
+    createTask(): void{
+      this.service.createTask(this.task)
+      .subscribe(retorno => { 
+        this.tasks.push(retorno);
+        this.task = new Task();
+        alert('Task cadastrada com sucesso!')
+      });
+    }
+    
+
   //metodo de inicialização
   ngOnInit(){    
     console.log(this.task);
