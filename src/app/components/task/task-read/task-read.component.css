@@ -10,14 +10,28 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    margin-top: 50px;
+    
 }
 
-td {
-    background-color: #d7d8f5;
+tbody{
+    margin-top: 20px;
+}
+
+.td-background{
+    background-color: rgba(215, 216, 245, 0.8) ;
     border-color: #fcfce2;
     color: #2e4d90;
     cursor: pointer;
+}
+tr:hover{
+    background-color: rgba(215, 216, 245, 0.9) ;
+
+}
+
+td .form-check{
+    background-color: rgba(215, 216, 245, 0) ;
+
 }
 
 .div-check-description {
@@ -94,4 +108,26 @@ option{
 }
 .backgroud-color-form::placeholder{
     color: #2e4d90;
+}
+
+.images-background{
+    position: relative;
+    width: 100vw;
+}
+.image-background1{
+    position: absolute;
+    height: 90vh;
+    margin-left: 0px;
+    z-index: -1;
+}
+.image-background2{
+    position: absolute;
+    height: 50vh;
+    right: 0px;
+    z-index: -1;
+}
+
+.alert{
+    width: 50%;
+    margin: 30px auto 0px auto;
 }

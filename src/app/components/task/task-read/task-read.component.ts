@@ -10,7 +10,7 @@ import { CategoryService } from '../../../servico/category/category.service';
   styleUrl: './task-read.component.css'
 })
 export class TaskReadComponent {
-  
+
   task = new Task();
   category = new Category();
 
@@ -19,35 +19,34 @@ export class TaskReadComponent {
   categories: Category[] = [];
 
   //construtor
-  constructor(private service:TaskService,
-    private categoryservice: CategoryService){}
+  constructor(private service: TaskService,
+    private categoryservice: CategoryService) { }
 
   //metodo de listagem
-  getAllTasks(): void{
+  getAllTasks(): void {
     this.service.getAllTasks()
-    .subscribe(retorno => this.tasks = retorno);
-  } 
-
-  getAllCategories(): void{
-    this.categoryservice.getAllCategories()
-    .subscribe(retorno => this.categories = retorno);
+      .subscribe(retorno => this.tasks = retorno);
   }
 
-    //metodo de cadastro
-    createTask(): void{
-      this.service.createTask(this.task)
-      .subscribe(retorno => { 
+  getAllCategories(): void {
+    this.categoryservice.getAllCategories()
+      .subscribe(retorno => this.categories = retorno);
+  }
+
+  //metodo de cadastro
+  createTask(): void {
+    this.service.createTask(this.task)
+      .subscribe(retorno => {
         this.tasks.push(retorno);
         this.task = new Task();
-        alert('Task cadastrada com sucesso!')
+        alert("Task created successfully!")
       });
-    }
-    
-
+  }
+  
   //metodo de inicialização
-  ngOnInit(){    
+  ngOnInit() {
     console.log(this.task);
-    
+
     this.getAllTasks();
     this.getAllCategories();
   }

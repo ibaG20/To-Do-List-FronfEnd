@@ -1,3 +1,4 @@
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -9,14 +10,14 @@
             <div class="modal-body">
                 <form>
                     <label class="form-label">Description</label>
-                    <input type="text" placeholder="Fazer atividade X" class="form-control backgroud-color-form" name="description"
-                        [(ngModel)]="task.description">
-                
+                    <input type="text" placeholder="Fazer atividade X" class="form-control backgroud-color-form"
+                        name="description" [(ngModel)]="task.description">
+
                     <select class="form-select backgroud-color-form" name="category" [(ngModel)]="task.category">
                         <option selected>Category</option>
                         <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
                     </select>
-                
+
                 </form>
             </div>
             <div class="modal-footer">
@@ -27,7 +28,10 @@
     </div>
 </div>
 
-
+<div class="images-background">
+    <img class="image-background1" src="../../../../assets/cherry tree-pana.svg" alt="">
+    <img class="image-background2" src="../../../../assets/cherry blossom-pana.svg" alt="">
+</div>
 <!-- QUANDO CLICAR NA TD ABRIR UM POPUP COM OS DETALHES DA TAREFA -->
 <table class="table">
     <button type="button" class="btn btn-create-task" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -35,7 +39,7 @@
     </button>
     <tbody>
         <tr *ngFor="let t of tasks">
-            <td>
+            <td class="td-background">
                 <div class="div-check-description">
             <td>
                 <div class="form-check">
@@ -45,13 +49,13 @@
                         id="flexCheckDefault">
                 </div>
             </td>
-            <td>{{t.description}}</td>
+            <td class="td-descriptiond">{{t.description}}</td>
 
             </div>
 
             </td>
-            <td>{{t.category.name}} #</td>
-            <td>
+            <td class="td-background">{{t.category.name}} #</td>
+            <td class="td-background">
                 <div class="dropdown">
                     <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img
                             class="hamburger-image" src="../../../../assets/hamburger-dark.png" alt=""></button>
