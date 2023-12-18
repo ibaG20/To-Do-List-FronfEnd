@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TaskReadComponent } from './components/task/task-read/task-read.component';
 import { HomeComponent } from './components/home/home.component';
+import { CategoryComponent } from './components/category/category.component';
+import { TaskComponent } from './components/task/task.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,11 @@ const routes: Routes = [
   },
   {
     path: 'tasks',
-    component: TaskReadComponent
+    component: TaskComponent
+  },
+  {
+    path: 'categories',
+    component: CategoryComponent
   }
 ];
 

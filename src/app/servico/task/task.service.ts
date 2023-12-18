@@ -21,11 +21,13 @@ export class TaskService {
   }
   
   updateTask(obj: Task): Observable<Task> {
-    return this.http.put<Task>(this.url, obj);
+    const url2 = this.url + obj.id
+    return this.http.put<Task>(url2, obj);
   }
   
   deleteTask(id:number): Observable<void> {
-    return this.http.delete<void>(this.url + '/' + id);
+    const url2 = `${this.url}/${id}`
+    return this.http.delete<void>(url2);
   }
 
 }

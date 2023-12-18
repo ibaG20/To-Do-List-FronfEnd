@@ -9,9 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './components/category/category.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
-import { TaskReadComponent } from './components/task/task-read/task-read.component';
 import { HomeComponent } from './components/home/home.component';
-import { TaskCreateComponent } from './components/task/task-create/task-create.component';
 
 @NgModule({
   declarations: [
@@ -20,15 +18,14 @@ import { TaskCreateComponent } from './components/task/task-create/task-create.c
     CategoryComponent,
     NavComponent,
     FooterComponent,
-    TaskReadComponent,
     HomeComponent,
-    TaskCreateComponent
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

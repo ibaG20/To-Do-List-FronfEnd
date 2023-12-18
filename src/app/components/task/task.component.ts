@@ -20,17 +20,32 @@ export class TaskComponent {
   categories: Category[] = [];
 
   //construtor
-  constructor(private service:TaskService,
-    private categoryservice: CategoryService){}
+  constructor(private service: TaskService,
+    private categoryservice: CategoryService) { }
+
+  //metodo de listagem
+  getAllTasks(): void {
+    this.service.getAllTasks()
+      .subscribe(retorno => this.tasks = retorno);
+  }
+
+  getAllCategories(): void {
+    this.categoryservice.getAllCategories()
+      .subscribe(retorno => this.categories = retorno);
+  }
   
   //metodo de cadastro
-  createTask(): void{
+  createTask(): void {
     this.service.createTask(this.task)
-    .subscribe(retorno => { 
-      this.tasks.push(retorno);
-      this.task = new Task();
-      alert('Task cadastrada com sucesso!')
-    });
+      .subscribe(retorno => {
+        this.tasks.push(retorno);
+        this.task = new Task();
+        alert("Task created successfully!");
+      }/* , err => {
+        if(err.error.error.match('Category not found')){
+          alert(err.error.error)
+        }
+      }*/) ;
   }
   
   //metodo de alteração
@@ -65,7 +80,7 @@ export class TaskComponent {
 
       alert('Task removida com sucesso!')
     });
-  }
+  } 
   
  /*  btnChecked(): void{
     this.service.getAllTasks()
@@ -75,6 +90,9 @@ export class TaskComponent {
 
   //metodo de inicialização
   ngOnInit(){    
+    console.log(this.task);
 
+    this.getAllTasks();
+    this.getAllCategories();
   }
 }
